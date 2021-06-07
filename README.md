@@ -16,7 +16,7 @@ I will try to remember to keep the readme up-to-date with every commit,
 but I'm make sure that at least every push has an appropriate readme.
 ## Notes to myself
 
-*also nothing*
+*nothing*
 
 ## TODO
 1. [x] project setup
