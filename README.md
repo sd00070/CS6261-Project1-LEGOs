@@ -4,6 +4,7 @@ This tiny application will be used to keep track of a bunch of LEGO bricks.
 When it is complete, it should be able to distribute the bricks into piles according to their size and color, and it should be able to check to see if a brick of a certain size and color exists in the pile.
 
 The purpose of the assignment is to gain familiarity with using BSTs (Binary Search Trees), Dictionaries, the mocha test framework, and the git CLI.
+
 ## Notes to Dr. B
 
 Thanks for looking at my readme!
@@ -14,11 +15,16 @@ notes to be seen by the professor, and notes to myself to keep track of things.
 
 I will try to remember to keep the readme up-to-date with every commit,
 but I'm make sure that at least every push has an appropriate readme.
+
+### Why did you tell git to ignore the node_modules directory?
+> The node_modules directory is notorious for being incredibly large. Due to the way commits work in git, each iterative commit would grow rapidly in comparison to its predecessor. I try to make a lot of commits (I may commit a bit too often), and I do not want to bust the upload size on Moodle.
+
 ## Notes to myself
 
 *nothing*
 
 ## TODO
+
 1. [x] project setup
 2. [x] Brick class & tests
 3. [ ] Book's BST
