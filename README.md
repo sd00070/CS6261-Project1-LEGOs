@@ -1,5 +1,11 @@
 # Project 1: Sorting LEGOs by size and color
 
+This tiny application will be used to keep track of a bunch of LEGO bricks.
+When it is complete, it should be able to distribute the bricks into piles according to their size and color, and it should be able to check to see if a brick of a certain size and color exists in the pile.
+
+The purpose of the assignment is to gain familiarity with using BSTs (Binary Search Trees), Dictionaries, the mocha test framework, and the git CLI.
+## Notes to Dr. B
+
 Thanks for looking at my readme!
 I know it isn't in the requirements, but every good git repo should have one.
 
@@ -8,3 +14,14 @@ notes to be seen by the professor, and notes to myself to keep track of things.
 
 I will try to remember to keep the readme up-to-date with every commit,
 but I'm make sure that at least every push has an appropriate readme.
+## Notes to myself
+
+*also nothing*
+
+## TODO
+1. [x] project setup
+2. [x] Brick class & tests
+3. [ ] Book's BST
+4. [ ] LegoPile (dictionary) class
+5. [ ] searching the LegoPile
+6. [ ] counting all of the Bricks
