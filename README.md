@@ -30,7 +30,7 @@ but I'm make sure that at least every push has an appropriate readme.
 
 1. [x] project setup
 2. [x] Brick class & tests
-3. [ ] Book's BST
+3. [x] Book's BST
 4. [ ] LegoPile (dictionary) class
 5. [ ] searching the LegoPile
 6. [ ] counting all of the Bricks
