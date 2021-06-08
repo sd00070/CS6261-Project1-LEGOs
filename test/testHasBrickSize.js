@@ -2,6 +2,7 @@ var assert = require('assert')
 var lego = require('../legos')
 
 const LegoPile = lego.LegoPile
+const Brick = lego.Brick
 
 describe('Lego Pile', function () {
     describe('hasBrick', function () {
@@ -21,8 +22,26 @@ describe('Lego Pile', function () {
             assert.equal(false, result)
         })
 
-        it.skip('should return false if the queried size is not in the corresponding color pile', function () {
+        it('should return false if the queried size is not in the corresponding color pile', function () {
+            let pile = new LegoPile()
+            pile.insert(new Brick(4, "red"))
+            pile.insert(new Brick(12, "red"))
 
+            const result = pile.hasBrick(16, "red")
+
+            assert.equal(false, result)
+        })
+
+        it('should return true if a Brick of the matching color and size exists in the LegoPile', function () {
+            let pile = new LegoPile()
+            pile.insert(new Brick(4, "red"))
+            pile.insert(new Brick(4, "green"))
+            pile.insert(new Brick(16, "red"))
+            pile.insert(new Brick(12, "black"))
+
+            const result = pile.hasBrick(16, "red")
+
+            assert.equal(true, result)
         })
     })
 })

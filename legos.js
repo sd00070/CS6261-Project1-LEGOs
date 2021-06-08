@@ -65,4 +65,8 @@ function hasBrick(size, color) {
     if (this.colors[color].root === null) {
         return false
     }
+
+    const query = this.colors[color].find(new Brick(size, color))
+
+    return query != null
 }
