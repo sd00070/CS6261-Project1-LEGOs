@@ -29,4 +29,4 @@ but I'm make sure that at least every push has an appropriate readme.
 3. [x] Book's BST
 4. [x] LegoPile (dictionary) class
 5. [x] searching the LegoPile
-6. [ ] counting all of the Bricks
+6. [x] counting all of the Bricks
