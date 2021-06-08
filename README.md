@@ -22,10 +22,6 @@ but I'm make sure that at least every push has an appropriate readme.
 ### Why did you change the name of the primary branch from "master" to "main"?
 > Github relatively recently changed all of their primary branches to "main." In order to match the standard (as I will be hosting the repo on github), I decided it would be best to change it.
 
-## Notes to myself
-
-*nothing*
-
 ## TODO
 
 1. [x] project setup
