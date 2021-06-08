@@ -55,5 +55,29 @@ describe('BST', function () {
             assert.equal(testTree.root.left.data, testLeftBrick)
             assert.equal(testTree.root.right.data, testRightBrick)
         })
+
+        it('(general) should support adding outside left grandchildren', function () {
+            let testTree = new BST()
+
+            let testOutsideLeftGrandchildBrick = new Brick(1, "gold")
+
+            testTree.insert(new Brick(4, "red"))
+            testTree.insert(new Brick(3, "blue"))
+            testTree.insert(testOutsideLeftGrandchildBrick)
+
+            assert.equal(testTree.root.left.left.data, testOutsideLeftGrandchildBrick)
+        })
+
+        it('(general) should support adding outside right grandchildren', function () {
+            let testTree = new BST()
+
+            let testOutsideRightGrandchildBrick = new Brick(64, "green")
+
+            testTree.insert(new Brick(4, "red"))
+            testTree.insert(new Brick(8, "grey"))
+            testTree.insert(testOutsideRightGrandchildBrick)
+
+            assert.equal(testTree.root.right.right.data, testOutsideRightGrandchildBrick)
+        })
     })
 })
