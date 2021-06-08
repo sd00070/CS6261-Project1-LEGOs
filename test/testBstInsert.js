@@ -8,100 +8,97 @@ const BST = bst.BST
 describe('BST', function () {
     describe('insert', function () {
         it('(single node) should have a single Node at its root after calling on empty tree', function () {
-            let testTree = new BST()
+            let tree = new BST()
 
-            let testBrick = new Brick(4, "red")
+            let rootBrick = new Brick(4, "red")
 
-            testTree.insert(testBrick)
+            tree.insert(rootBrick)
 
-            assert.equal(testTree.root.data, testBrick)
+            assert.equal(tree.root.data, rootBrick)
         })
 
         it('(root + left) should add a Node to the left when the size is less than the root', function () {
-            let testTree = new BST()
+            let tree = new BST()
 
-            let testRootBrick = new Brick(4, "red")
-            let testLeftBrick = new Brick(1, "red")
+            let leftBrick = new Brick(1, "red")
 
-            testTree.insert(testRootBrick)
-            testTree.insert(testLeftBrick)
+            tree.insert(new Brick(4, "red"))
+            tree.insert(leftBrick)
 
-            assert.equal(testTree.root.left.data, testLeftBrick)
+            assert.equal(tree.root.left.data, leftBrick)
         })
 
         it('(root + right) should add a Node to the right when the size is greater than the root', function () {
-            let testTree = new BST()
+            let tree = new BST()
 
-            let testRootBrick = new Brick(4, "red")
-            let testRightBrick = new Brick(8, "red")
+            let rightBrick = new Brick(8, "red")
 
-            testTree.insert(testRootBrick)
-            testTree.insert(testRightBrick)
+            tree.insert(new Brick(4, "red"))
+            tree.insert(rightBrick)
 
-            assert.equal(testTree.root.right.data, testRightBrick)
+            assert.equal(tree.root.right.data, rightBrick)
         })
 
         it('(root + (left & right)) should support adding children to both sides of the tree', function () {
-            let testTree = new BST()
+            let tree = new BST()
 
-            let testRootBrick = new Brick(4, "red")
-            let testLeftBrick = new Brick(1, "red")
-            let testRightBrick = new Brick(8, "red")
+            let leftBrick = new Brick(1, "red")
+            let rightBrick = new Brick(8, "red")
 
-            testTree.insert(testRootBrick)
-            testTree.insert(testLeftBrick)
-            testTree.insert(testRightBrick)
+            tree.insert(new Brick(4, "red"))
+            tree.insert(leftBrick)
+            tree.insert(rightBrick)
 
-            assert.equal(testTree.root.left.data, testLeftBrick)
-            assert.equal(testTree.root.right.data, testRightBrick)
+            assert.equal(tree.root.left.data, leftBrick)
+            assert.equal(tree.root.right.data, rightBrick)
         })
 
         it('(general) should support adding outside left grandchildren', function () {
-            let testTree = new BST()
+            let tree = new BST()
 
-            let testOutsideLeftGrandchildBrick = new Brick(1, "gold")
+            let outsideLeftGrandchildBrick = new Brick(1, "gold")
 
-            testTree.insert(new Brick(4, "red"))
-            testTree.insert(new Brick(3, "blue"))
-            testTree.insert(testOutsideLeftGrandchildBrick)
+            tree.insert(new Brick(4, "red"))
+            tree.insert(new Brick(3, "blue"))
+            tree.insert(outsideLeftGrandchildBrick)
 
-            assert.equal(testTree.root.left.left.data, testOutsideLeftGrandchildBrick)
+            assert.equal(tree.root.left.left.data, outsideLeftGrandchildBrick)
         })
 
         it('(general) should support adding outside right grandchildren', function () {
-            let testTree = new BST()
+            let tree = new BST()
 
-            let testOutsideRightGrandchildBrick = new Brick(64, "green")
+            let outsideRightGrandchildBrick = new Brick(64, "green")
 
-            testTree.insert(new Brick(4, "red"))
-            testTree.insert(new Brick(8, "grey"))
-            testTree.insert(testOutsideRightGrandchildBrick)
+            tree.insert(new Brick(4, "red"))
+            tree.insert(new Brick(8, "grey"))
+            tree.insert(outsideRightGrandchildBrick)
 
-            assert.equal(testTree.root.right.right.data, testOutsideRightGrandchildBrick)
+            assert.equal(tree.root.right.right.data, outsideRightGrandchildBrick)
         })
 
         it('(general) should support adding inside left grandchildren', function () {
-            let testTree = new BST()
+            let tree = new BST()
 
-            let testInsideLeftGrandchild = new Brick(3, "blue")
+            let insideLeftGrandchild = new Brick(3, "blue")
 
-            testTree.insert(new Brick(4, "red"))
-            testTree.insert(new Brick(1, "red"))
-            testTree.insert(testInsideLeftGrandchild)
+            tree.insert(new Brick(4, "red"))
+            tree.insert(new Brick(1, "red"))
+            tree.insert(insideLeftGrandchild)
 
-            assert.equal(testTree.root.left.right.data, testInsideLeftGrandchild)
+            assert.equal(tree.root.left.right.data, insideLeftGrandchild)
         })
 
         it('(general) should support adding inside right grandchildren', function () {
-            let testTree = new BST()
+            let tree = new BST()
 
-            let testInsideRightGrandchild = new Brick(8, "grey")
+            let insideRightGrandchild = new Brick(8, "grey")
 
-            testTree.insert(new Brick(1, "red"))
-            testTree.insert(new Brick(64, "green"))
-            testTree.insert(testInsideRightGrandchild)
+            tree.insert(new Brick(1, "red"))
+            tree.insert(new Brick(64, "green"))
+            tree.insert(insideRightGrandchild)
 
-            assert.equal(testTree.root.right.left.data, testInsideRightGrandchild)
+            assert.equal(tree.root.right.left.data, insideRightGrandchild)
         })
     })
 })
