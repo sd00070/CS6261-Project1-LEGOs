@@ -45,7 +45,7 @@ function insert(data) {
         while (true) {
             parent = current
 
-            if (data < current.data) {
+            if (data.size < current.data.size) {
                 current = current.left
 
                 if (current == null) {
