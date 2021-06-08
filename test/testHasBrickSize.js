@@ -10,7 +10,7 @@ describe('LegoPile hasBrick', function () {
 
         const result = pile.hasBrick(4, "pink")
 
-        assert.equal(false, result)
+        assert.equal(result, false)
     })
 
     it('should return false if the queried color pile is empty', function () {
@@ -18,7 +18,7 @@ describe('LegoPile hasBrick', function () {
 
         const result = pile.hasBrick(4, "red")
 
-        assert.equal(false, result)
+        assert.equal(result, false)
     })
 
     it('should return false if the queried size is not in the corresponding color pile', function () {
@@ -28,7 +28,7 @@ describe('LegoPile hasBrick', function () {
 
         const result = pile.hasBrick(16, "red")
 
-        assert.equal(false, result)
+        assert.equal(result, false)
     })
 
     it('should return true if a Brick of the matching color and size exists in the LegoPile', function () {
@@ -40,6 +40,6 @@ describe('LegoPile hasBrick', function () {
 
         const result = pile.hasBrick(16, "red")
 
-        assert.equal(true, result)
+        assert.equal(result, true)
     })
 })

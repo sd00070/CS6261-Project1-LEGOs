@@ -9,7 +9,7 @@ describe('BST count', function () {
 
         const count = tree.count()
 
-        assert.equal(0, count)
+        assert.equal(count, 0)
     })
 
     it('should return one (1) if it only has a root', function () {
@@ -18,7 +18,7 @@ describe('BST count', function () {
 
         const count = tree.count()
 
-        assert.equal(1, count)
+        assert.equal(count, 1)
     })
 
     it('should return the number of nodes in the BST', function () {
@@ -33,6 +33,6 @@ describe('BST count', function () {
 
         const count = tree.count()
 
-        assert.equal(7, count)
+        assert.equal(count, 7)
     })
 })

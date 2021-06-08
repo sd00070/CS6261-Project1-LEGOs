@@ -9,7 +9,7 @@ describe('BST find', function () {
 
         const result = tree.find({ size: 0 })
 
-        assert.equal(null, result)
+        assert.equal(result, null)
     })
 
     it('should return null if the value is not in the tree', function () {
@@ -20,7 +20,7 @@ describe('BST find', function () {
 
         const result = tree.find({ size: 2 })
 
-        assert.equal(null, result)
+        assert.equal(result, null)
     })
 
     it('should return the Node with the stored value if found', function () {
@@ -36,6 +36,6 @@ describe('BST find', function () {
 
         const foundNode = tree.find(testData)
 
-        assert.equal(testData, foundNode.data)
+        assert.equal(foundNode.data, testData)
     })
 })

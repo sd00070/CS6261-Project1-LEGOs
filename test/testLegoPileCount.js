@@ -10,7 +10,7 @@ describe('LegoPile count', function () {
 
         const totalBricks = pile.count()
 
-        assert.equal(0, totalBricks)
+        assert.equal(totalBricks, 0)
     })
 
     it('should return six (6) if there is one of every color', function () {
@@ -25,7 +25,7 @@ describe('LegoPile count', function () {
 
         const totalBricks = pile.count()
 
-        assert.equal(6, totalBricks)
+        assert.equal(totalBricks, 6)
     })
 
     it('should return the number of Bricks in the entire LegoPile', function () {
@@ -45,6 +45,6 @@ describe('LegoPile count', function () {
 
         const totalBricks = pile.count()
 
-        assert.equal(11, totalBricks)
+        assert.equal(totalBricks, 11)
     })
 })
