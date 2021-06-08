@@ -40,5 +40,27 @@ describe('LegoPile', function () {
             assert.equal(pile.colors.black.root.data, blackBrick)
             assert.equal(pile.colors.white.root.data, whiteBrick)
         })
+
+        it('(several bricks of one color) should allow insertion of multiple Bricks of the same color', function () {
+            let pile = new LegoPile()
+
+            const red2x2 = new Brick(4, "red")
+            const redStud = new Brick(1, "red")
+            const red1x2 = new Brick(2, "red")
+            const red2x2Corner = new Brick(3, "red")
+            const red2x4 = new Brick(8, "red")
+
+            pile.insert(red2x2)
+            pile.insert(redStud)
+            pile.insert(red1x2)
+            pile.insert(red2x2Corner)
+            pile.insert(red2x4)
+
+            assert.equal(pile.colors.red.root.data, red2x2)
+            assert.equal(pile.colors.red.root.left.data, redStud)
+            assert.equal(pile.colors.red.root.left.right.data, red1x2)
+            assert.equal(pile.colors.red.root.left.right.right.data, red2x2Corner)
+            assert.equal(pile.colors.red.root.right.data, red2x4)
+        })
     })
 })
