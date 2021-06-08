@@ -34,6 +34,7 @@ function LegoPile() {
         white: new BST()
     }
     this.insert = insert
+    this.hasBrick = hasBrick
 }
 
 /**
@@ -47,4 +48,21 @@ function insert(brick) {
         return
     }
     this.colors[brick.color].insert(brick)
+}
+
+/**
+ * Searches through the LegoPile for a Brick of the given size and color.
+ * Returns whether or not one exists.
+ * 
+ * @param {number} size the number of studs on the top of the queried Brick
+ * @param {string} color the color of the queried Brick
+ * @returns true if brick is in LegoPile, false otherwise
+ */
+function hasBrick(size, color) {
+    if (!(color in this.colors)) {
+        return false
+    }
+    if (this.colors[color].root === null) {
+        return false
+    }
 }
