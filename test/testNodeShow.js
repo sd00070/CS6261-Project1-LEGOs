@@ -1,5 +1,5 @@
-const assert = require('assert')
-const BinaryTree = require('../bst')
+var assert = require('assert')
+var BinaryTree = require('../bst')
 
 describe('Node', function () {
     describe('show', function () {
