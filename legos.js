@@ -35,6 +35,7 @@ function LegoPile() {
     }
     this.insert = insert
     this.hasBrick = hasBrick
+    this.count = count
 }
 
 /**
@@ -69,4 +70,14 @@ function hasBrick(size, color) {
     const query = this.colors[color].find(new Brick(size, color))
 
     return query != null
+}
+
+/**
+ * Counts the total number of Bricks in the LegoPile
+ * @returns {number} the number of Bricks in the LegoPile
+ */
+function count() {
+    return Object.values(this.colors).reduce(function (totalBricks, colorTree) {
+        return totalBricks + colorTree.count()
+    }, 0)
 }
