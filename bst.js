@@ -29,6 +29,7 @@ function BST() {
     this.root = null
     this.insert = insert
     this.find = find
+    this.count = count
 }
 
 /**
@@ -90,4 +91,25 @@ function find(data) {
     }
 
     return current
+}
+
+/**
+ * Counts the total number of Nodes in the BST
+ * @returns {number} the total count
+ */
+function count() {
+    /**
+     * Counts the Nodes in the tree from the given starting point
+     * @param {Node} node the Node to start from
+     * @returns {number} the number of Nodes in the subtree
+     */
+    const countNodes = function (node) {
+        if (node === null || node === undefined) {
+            return 0
+        }
+
+        return 1 + countNodes(node.left) + countNodes(node.right)
+    }
+
+    return countNodes(this.root)
 }
