@@ -100,5 +100,22 @@ describe('BST', function () {
 
             assert.equal(tree.root.right.left.data, insideRightGrandchild)
         })
+
+        it('(general) should support adding nodes deep into the structure', function () {
+            let tree = new BST()
+
+            let deepAncestorBrick = new Brick(13, "black")
+
+            tree.insert(new Brick(4, "red"))
+            tree.insert(new Brick(20, "green"))
+            tree.insert(new Brick(18, "gold"))
+            tree.insert(new Brick(6, "yellow"))
+            tree.insert(new Brick(14, "pink"))
+            tree.insert(new Brick(10, "blue"))
+            tree.insert(new Brick(12, "purple"))
+            tree.insert(deepAncestorBrick)
+
+            assert.equal(tree.root.right.left.left.right.left.right.right.data, deepAncestorBrick)
+        })
     })
 })
