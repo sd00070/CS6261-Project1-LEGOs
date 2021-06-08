@@ -9,11 +9,11 @@ describe('LegoPile', function () {
         it('(one brick) should insert a Brick into the correct color in an empty LegoPile', function () {
             let pile = new LegoPile()
 
-            const oneRedBrick = new Brick(4, "red")
+            const redBrick = new Brick(4, "red")
 
-            pile.insert(oneRedBrick)
+            pile.insert(redBrick)
 
-            assert.equal(pile.colors.red.root.data, oneRedBrick)
+            assert.equal(pile.colors.red.root.data, redBrick)
         })
 
         it('(one of each color) should allow inserting into all colors', function () {
