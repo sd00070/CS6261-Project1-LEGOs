@@ -33,6 +33,7 @@ function LegoPile() {
         black: new BST(),
         white: new BST()
     }
+    this.insert = insert
 }
 
 /**
