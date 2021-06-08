@@ -28,10 +28,11 @@ function show() {
 function BST() {
     this.root = null
     this.insert = insert
+    this.find = find
 }
 
 /**
- * inserts some data into the BST
+ * Inserts a Brick (or any other object with a comparable size field) into the BST.
  * @param {any} data the information stored in the Node of the tree
  */
 function insert(data) {
@@ -62,4 +63,31 @@ function insert(data) {
             }
         }
     }
+}
+
+/**
+ * Searches for a Brick (or any other object with a comparable size field) and returns the Node that contains it.
+ * If the value is not in the BST, it returns null.
+ * @param {any} data the value to be searched for in the BST
+ * @returns the matching Node if it exists, null otherwise
+ */
+function find(data) {
+    var current = this.root
+
+    if (current == null) {
+        return null
+    }
+
+    while (current.data.size !== data.size) {
+        if (data.size < current.data.size) {
+            current = current.left
+        } else {
+            current = current.right
+        }
+        if (current == null) {
+            return null
+        }
+    }
+
+    return current
 }
